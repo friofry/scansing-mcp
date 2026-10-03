@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "app.scansing/scansing",
+  "title": "ScanSing: sheet music to MusicXML",
+  "description": "Sheet music (PDF, photo, scan) to MusicXML: recognise, describe, extract parts, transpose, MIDI.",
+  "version": "0.1.0",
+  "websiteUrl": "https://scansing.app/mcp/",
+  "icons": [
+    {
+      "src": "https://scansing.app/assets/img/icon-512.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "repository": {
+    "url": "https://github.com/friofry/scansing-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.scansing.app/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional: 'Bearer <ScanSing API key>' from https://scansing.app. Leave it out to sign in with OAuth.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
