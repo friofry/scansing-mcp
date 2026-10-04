@@ -4,7 +4,7 @@ ScanSing is a hosted remote MCP server. There is nothing to clone, build or run 
 
 1. Ask the user for a ScanSing API key (it starts with `omr_`). They can get one at https://api.scansing.app/account: signing in with a new email comes with 20 free pages.
 2. Add the server to the MCP settings file the client actually reads. For Cline it is `cline_mcp_settings.json`, and the path depends on the Cline flavour:
-   - Cline app and CLI: `~/.cline/data/settings/cline_mcp_settings.json`
+   - Cline app and CLI: `~/.cline/data/settings/cline_mcp_settings.json` (or `$CLINE_MCP_SETTINGS_PATH` when set)
    - Cline in VS Code (macOS): `~/Library/Application Support/Code/User/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json` (Linux: `~/.config/Code/...`, Windows: `%APPDATA%\Code\...`)
 
    The exact path is shown in Cline under Customize → MCP ("MCP settings path"). Create the file if it does not exist, and merge into `mcpServers` if it does:
