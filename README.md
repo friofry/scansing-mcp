@@ -10,7 +10,7 @@ ScanSing is a hosted (remote) MCP server. Nothing to install: connect to
 https://mcp.scansing.app/mcp
 ```
 
-Sign-in is OAuth (your client opens the ScanSing page; a new email gets 20 free pages), or send an API key from https://scansing.app/account as `Authorization: Bearer <key>`.
+Sign-in is OAuth (your client opens the ScanSing page; a new email gets 20 free pages), or send an API key from https://api.scansing.app/account as `Authorization: Bearer <key>`.
 
 ## Install
 
@@ -21,6 +21,22 @@ claude mcp add --transport http scansing https://mcp.scansing.app/mcp
 ```
 
 Claude (claude.ai / desktop): Settings → Connectors → Add custom connector → `https://mcp.scansing.app/mcp`.
+
+Cline (`cline_mcp_settings.json`, API key from https://api.scansing.app/account):
+
+```json
+{
+  "mcpServers": {
+    "scansing": {
+      "type": "streamableHttp",
+      "url": "https://mcp.scansing.app/mcp",
+      "headers": { "Authorization": "Bearer omr_YOUR_KEY" }
+    }
+  }
+}
+```
+
+Agents installing it themselves: see [llms-install.md](llms-install.md).
 
 Cursor / VS Code / other clients (`mcp.json`):
 
