@@ -61,6 +61,7 @@ Cursor / VS Code / other clients (`mcp.json`):
 | `describe_score` | Title, composer, key, time, tempo; per part range, clefs, lyrics |
 | `extract_part` | MusicXML of one part (e.g. the alto) |
 | `transpose_score` | The score or a part in another key |
+| `label_notes` | The MusicXML with each note's name under it: letters (C♯, B♭) or do re mi |
 | `export_midi` | MIDI link, one track per part |
 | `get_download_link` | Short-lived link to MusicXML or MIDI to open in a browser or notation app |
 
